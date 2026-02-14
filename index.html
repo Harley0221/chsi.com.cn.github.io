@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高等学籍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 16px 8px;
+            background-color: #ffffff;
+            /* 添加底部边框作为分隔线 */
+            border-bottom: 1px solid #eeeeee;
+        }
+        .header-left, .header-right {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333333;
+        }
+        .sub-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #ffffff;
+        }
+        .sub-header-back {
+            width: 24px;
+            height: 24px;
+            border-left: 2px solid #333;
+            border-bottom: 2px solid #333;
+            transform: rotate(45deg);
+        }
+        .sub-header-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333333;
+            margin-left: 16px;
+        }
+        .card {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            margin: 16px;
+            border-radius: 12px;
+            padding: 20px;
+            color: #ffffff;
+        }
+        .card-top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .photos {
+            display: flex;
+            gap: 16px;
+            margin-right: 20px;
+        }
+        .photo-item {
+            text-align: center;
+        }
+        .photo {
+            width: 80px;
+            height: 100px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .photo-text {
+            font-size: 12px;
+            color: #ffffff;
+        }
+        .card-info {
+            flex: 1;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .basic-info {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .school-info {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .major-info {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .level-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 14px;
+            margin-left: auto;
+        }
+        .info-list {
+            margin: 0 16px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .info-label {
+            font-size: 16px;
+            color: #999999;
+        }
+        .info-value {
+            font-size: 16px;
+            color: #333333;
+        }
+        .verify-btn {
+            background-color: #10b981;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 18px;
+            width: calc(100% - 32px);
+            margin: 24px 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div style="width: 20px; height: 20px; border-left: 2px solid #333; border-bottom: 2px solid #333; transform: rotate(45deg);"></div>
+            </div>
+            <div class="header-title"></div>
+            <div class="header-right">
+                <div style="width: 20px; height: 20px; border: 2px solid #333; border-radius: 2px; position: relative;">
+                    <div style="position: absolute; top: 2px; left: 2px; width: 12px; height: 2px; background-color: #333;"></div>
+                    <div style="position: absolute; top: 6px; left: 2px; width: 12px; height: 2px; background-color: #333;"></div>
+                    <div style="position: absolute; top: 10px; left: 2px; width: 12px; height: 2px; background-color: #333;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <div class="sub-header-back"></div>
+            <div class="sub-header-title">高等学籍</div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <div class="photos">
+                    <div class="photo-item">
+                        <div class="photo">
+                            <img src="https://via.placeholder.com/80x100" alt="录取照片" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                        </div>
+                        <div class="photo-text">录取照片</div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo">
+                            <img src="https://via.placeholder.com/80x100" alt="学历照片" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                        </div>
+                        <div class="photo-text">学历照片</div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="name">张昊宇</div>
+                    <div class="basic-info">男 &nbsp;&nbsp; 2003年04月17日</div>
+                </div>
+            </div>
+            <div class="school-info">武汉理工大学</div>
+            <div class="major-info">
+                <span>车辆工程</span>
+                <span>|</span>
+                <span>普通全日制</span>
+                <span class="level-tag">本科</span>
+            </div>
+        </div>
+        <div class="info-list">
+            <div class="info-item">
+                <span class="info-label">民族</span>
+                <span class="info-value">汉族</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">证件号码</span>
+                <span class="info-value">429006200304177034</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">学制</span>
+                <span class="info-value">4年</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">学历类别</span>
+                <span class="info-value">普通高等教育</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">分院</span>
+                <span class="info-value">马区</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">系所</span>
+                <span class="info-value">国教学院</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">班级</span>
+                <span class="info-value">车辆GJ2203</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">学号</span>
+                <span class="info-value">0122128250308</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">入学日期</span>
+                <span class="info-value">2022年09月01日</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">学籍状态</span>
+                <span class="info-value">在籍（注册学籍）</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">预计毕业日期</span>
+                <span class="info-value">2026年06月30日</span>
+            </div>
+        </div>
+        <button class="verify-btn">查看验证报告</button>
+    </div>
+</body>
+</html>
